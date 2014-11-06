@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="controllerExample">
+	<head>
+		<meta charset="UTF-8">
+		<title>TODO App Demo</title>
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<script src="libs/angularjs/angular.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body class="well" ng-controller="todoCtrl">
+		<h1>{{name}}</h1>
+
+		<p>전체 할 일 <strong>2</strong>개 / 남은 할일은 <strong>1</strong>개
+		[<a href="">보관하기</a>] </p>
+
+		<ul class="list-unstyled">
+			<li ng-repeat="todo in todoList" class="checkbox">
+				<input type="checkbox" ng-model="todo.done">{{todo.title}}
+			</li>
+		</ul>
+
+		<form name="newItemForm" class="form-inline" action="">
+			<div class="form-group">
+				<label class="sr-only" for="newItemText">새로운 할 일</label>
+				<input type="text" class="form-control" name="newItemText" placeholder="새로운 할 일">
+			</div>
+			<button type="submit" class="btn btn-default">추가</button>
+		</form>
+	</body>
+</html>
