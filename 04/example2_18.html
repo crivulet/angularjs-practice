@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title>ng-class example</title>
+		<script src="../angular-1.0.6/angular.js"></script>
+		<style type="text/css">
+			.apple {background-color: red;}
+			.lemon {background-color: yellow;}
+			.even { background-color: blue;}
+		</style>
+	</head>
+	<body>
+		<div ng-init="fruitList = ['apple', 'banana', 'tomato', 'lemon', 'grape']">
+			<ul>
+				<li ng-repeat="fruit in fruitList" ng-class="'{{fruit}}'">{{fruit}}</li>
+			</ul>
+			<ul>
+				<li ng-repeat="fruit in fruitList" ng-class="{'even':{{$first||$last}}}">{{fruit}}</li>
+			</ul>
+		</div>
+	</body>
+</html>
