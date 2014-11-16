@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS 적용</title>
+	<script src="./angular-1.0.6/angular.js"></script>
+</head>
+<body>
+	<div id="app1">
+		{{1+2}}
+	</div>
+	<div id="app2">
+		{{1+2}}
+	</div>
+</body>
+<script>
+	angular.element(document).ready(function() {
+		angular.bootstrap(document.getElementById('app1'));
+		angular.bootstrap(document.getElementById('app2'));
+	});
+</script>
+</html>
